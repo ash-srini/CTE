@@ -31,7 +31,7 @@ describe Message do
 	expect(message1.message).to eq "You have 10 notifications"
 	expect(message1.message_type).to eq "secure_message"
 	expect(message1.pop_up).to be false
-	expect(message1.publish_at).to eqls "2015-07-20T06:28:36-05:00" 
+	expect(message1.publish_at).to eq "2015-07-20T06:28:36-05:00" 
 	expect(message1.target).to eq "ios"
 	expect(message1.device_id).to eq "e25454608b6097bc412be42ad9bf39797a698925d947b9d136cbb992f649cc96"
 
@@ -64,9 +64,9 @@ describe Message do
 	expect(message2.message).to eq "This is a sample push notification message"
 	expect(message2.message_type).to eq "Reminder"
 	expect(message2.pop_up).to be true
-	expect(message2.publish_at).to eql "2015-07-21T06:28:36-05:00" 
+	expect(message2.publish_at).to eq "2015-07-21T06:28:36-05:00" 
 	expect(message2.target).to eq "android"
-	# expect(message1.device_id).to eq "e25454608b6097bc412be42ad9bf39797a698925d947b9d136cbb992f649cc96"
+	expect(message1.device_id).to eq "e25454608b6097bc412be42ad9bf39797a698925d947b9d136cbb992f649cc96"
 
 
 	#puts message1.message
